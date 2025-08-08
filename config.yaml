@@ -1,0 +1,30 @@
+# Directories
+raw_xml_dir: "Datasets/train/raw_xml"
+preprocessed_txt_dir: "Datasets/train/preprocessed_txt"
+CBOW_training_examples_dir: "Datasets/train/CBOW"
+SkipGram_training_examples_dir: "Datasets/train/SkipGram"
+CBOW_models_dir : "Models/CBOW"
+SkipGram_models_dir : "Models/SkipGram"
+
+# Dataset cleaning and preparing parameters
+min_freq_of_vocab_tokens: 100
+max_size_per_training_file_in_gigabytes: 8
+# parameters inculded in the hyperparmaters search
+num_negative_samples: 5
+sub_sampling_threshold: 0.0001 
+max_window_size: 5
+
+# Training Hyperparameters
+model_name :                  "word2ellipsoid"
+CBOW :                        True      # True means we are using the CBOW version of the models, False means we are using the SkipGram version of the models.
+num_learnable_parameters :    128
+epochs :                      2
+# parameters inculded in the hyperparameters search
+batch_size :                  32768
+learning_rate :               0.025
+margin :                      "Not Used"
+
+
+# Other parameters
+report_to_wandb :             True
+
