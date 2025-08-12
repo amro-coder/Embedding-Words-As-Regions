@@ -42,3 +42,14 @@ Before running the code, you must configure the local paths.
 Open the config.yaml file.
 
 Edit the paths to point to the correct locations on your local machine where you have stored the dataset and where you want to save model outputs.
+
+### Citation
+If you find this work useful in your research, please consider citing the thesis:
+
+Bibtex:
+@mastersthesis{salman2025regionembeddings,
+  author  = {Amro Salman},
+  title   = {Embedding Words As Regions},
+  school  = {University of Cambridge},
+  year    = {2025}
+}
