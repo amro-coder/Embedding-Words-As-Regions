@@ -26,13 +26,7 @@ The empirical findings from our experiments yield three principal conclusions:
 Follow these steps to set up the environment and reproduce the experiments.
 
 ### 1. Installation
-
-First, clone the repository and install the required Python packages.
-
-```bash
-git clone https://github.com/your-username/Embedding-Words-As-Regions.git
-cd Embedding-Words-As-Regions
-pip install -r requirements.txt
+First, clone the repository and install the required Python packages in requirements.txt.
 
 ### 2. Dataset Setup
 The models were trained on the WaCkypedia_EN dataset.
