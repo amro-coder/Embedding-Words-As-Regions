@@ -30,11 +30,15 @@ First, clone the repository and install the required Python packages in requirem
 
 ### 2. Dataset Setup
 The models were trained on the WaCkypedia_EN dataset.
+
 Download: You can request access to the dataset from the official source:
 https://wacky.sslmit.unibo.it/doku.php?id=start
+
 Preprocess: The dataset is provided in XML format. The prepare_dataset.py script is provided to preprocess the data into the required format.
 
 ### 3. Configuration
 Before running the code, you must configure the local paths.
+
 Open the config.yaml file.
+
 Edit the paths to point to the correct locations on your local machine where you have stored the dataset and where you want to save model outputs.
