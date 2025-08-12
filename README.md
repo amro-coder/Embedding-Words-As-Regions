@@ -1,42 +1,46 @@
-# Embedding-Words-As-Regions
+# Embedding Words As Regions: The Word2Ellipsoid Model
 
-This repositery contains the code of my Thesis at the University of Cambridge (google drive link https://drive.google.com/file/d/1mloLsGVmMXoPhBCRZs0LAiwkUBsyrVYa/view?usp=sharing).
+This repository contains the official source code for the Master's thesis, *"Embedding Words As Regions"*, completed at the University of Cambridge.
 
-Abstract:
+**[➡️ Read the Full Thesis Here](https://drive.google.com/file/d/1mloLsGVmMXoPhBCRZs0LAiwkUBsyrVYa/view?usp=sharing)**
 
- While Large Language Models (LLMs) have achieved state-of-the-art performance on a
- wide range of language understanding and generation benchmarks, their reliance on mas
-sive datasets and computational resources highlights a need for more data-efficient and
- representationally powerful models. A fundamental limitation, shared by both LLMs and
- traditional models like Word2Vec, is the use of point-based vectors, which struggle to
- capture complex, asymmetric linguistic relationships like hyponymy. Region-based repre
-sentations offer a theoretically powerful alternative, modeling word meanings as regions
- where relationships like hyponymy can be represented by geometric containment.
- This thesis introduces Word2Ellipsoid, a novel region-based model that represents words
- as fuzzy hyperellipsoids derived from a Gaussian function. A key advantage of this ap
-proach is that, unlike existing box-based models, it provides a closed-form, approximation
-free framework for calculating the volume of a hyperellipsoid. To evaluate its effectiveness,
- Word2Ellipsoid is benchmarked against a strong vector baseline (Word2Vec) and a state
-of-the-art region baseline (Word2Box). All models were assessed on a comprehensive suite
- of word similarity and hyponymy detection tasks.
- The empirical findings from our experiments yield three principal conclusions. First,
- Word2Ellipsoid outperformed Word2Box, indicating that our approximation-free mathe
-matical framework is more precise and robust. Second, the Word2Vec baseline consistently
- outperformed both regional methods, which suggests it is a strong baseline whose capa
-bilities may have been underestimated in prior research, potentially due to insufficient
- hyperparameter optimization. Finally, the evaluated regional models struggled to effec
-tively capture hyponymy relations. This highlights the inherent difficulty of learning such
- complex relationships from purely distributional data using simple training objectives.
+---
 
+## Abstract
 
- Note:
+> While Large Language Models (LLMs) have achieved state-of-the-art performance on a wide range of language understanding and generation benchmarks, their reliance on massive datasets and computational resources highlights a need for more data-efficient and representationally powerful models. A fundamental limitation, shared by both LLMs and traditional models like Word2Vec, is the use of point-based vectors, which struggle to capture complex, asymmetric linguistic relationships like hyponymy. Region-based representations offer a theoretically powerful alternative, modeling word meanings as regions where relationships like hyponymy can be represented by geometric containment.
 
- The config.yaml contains paths to repostries that some python code access, edit it with the correct local pathes for the code to work.
+> This thesis introduces Word2Ellipsoid, a novel region-based model that represents words as fuzzy hyperellipsoids derived from a Gaussian function. A key advantage of this approach is that, unlike existing box-based models, it provides a closed-form, approximation-free framework for calculating the volume of a hyperellipsoid. To evaluate its effectiveness, Word2Ellipsoid is benchmarked against a strong vector baseline (Word2Vec) and a state-of-the-art region baseline (Word2Box). All models were assessed on a comprehensive suite of word similarity and hyponymy detection tasks.
 
- Regarding the training dataset, the name of the dataset is WaCkypedia EN dataset,  here is a link to get the dataset from 
- https://wacky.sslmit.unibo.it/doku.php?id=start
- The dataset is in xml files and the full code to preproces it is provided in "prepare_dataset.py".
- 
- 
+## Key Findings
 
- 
+The empirical findings from our experiments yield three principal conclusions:
+1.  **Word2Ellipsoid outperformed Word2Box**, indicating that our approximation-free mathematical framework is more precise and robust.
+2.  **The Word2Vec baseline consistently outperformed both regional methods**, suggesting it is a strong baseline whose capabilities may have been underestimated in prior research.
+3.  **The evaluated regional models struggled to effectively capture hyponymy relations**, highlighting the inherent difficulty of learning such complex relationships from purely distributional data using simple training objectives.
+
+---
+
+## Getting Started
+
+Follow these steps to set up the environment and reproduce the experiments.
+
+### 1. Installation
+
+First, clone the repository and install the required Python packages.
+
+```bash
+git clone https://github.com/your-username/Embedding-Words-As-Regions.git
+cd Embedding-Words-As-Regions
+pip install -r requirements.txt
+
+2. Dataset Setup
+The models were trained on the WaCkypedia_EN dataset.
+Download: You can request access to the dataset from the official source:
+https://wacky.sslmit.unibo.it/doku.php?id=start
+Preprocess: The dataset is provided in XML format. The prepare_dataset.py script is provided to preprocess the data into the required format.
+
+3. Configuration
+Before running the code, you must configure the local paths.
+Open the config.yaml file.
+Edit the paths to point to the correct locations on your local machine where you have stored the dataset and where you want to save model outputs.
