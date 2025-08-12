@@ -28,4 +28,15 @@ bilities may have been underestimated in prior research, potentially due to insu
 tively capture hyponymy relations. This highlights the inherent difficulty of learning such
  complex relationships from purely distributional data using simple training objectives.
 
+
+ Note:
+
+ The config.yaml contains paths to repostries that some python code access, edit it with the correct local pathes for the code to work.
+
+ Regarding the training dataset, the name of the dataset is WaCkypedia EN dataset,  here is a link to get the dataset from 
+ https://wacky.sslmit.unibo.it/doku.php?id=start
+ The dataset is in xml files and the full code to preproces it is provided in "prepare_dataset.py".
+ 
+ 
+
  
